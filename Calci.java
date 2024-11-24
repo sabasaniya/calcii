@@ -23,6 +23,14 @@ public class Calci {
         }
 
         System.out.println("Result: " + result);
-        scanner.close();
+        catch (NoSuchElementException e) {
+            System.err.println("Error: Please provide a valid number.");
+            System.exit(1);
+        }
+	finally 
+	{
+            scanner.close(); // Close the scanner to release resources
+        
+	}
     }
 }
